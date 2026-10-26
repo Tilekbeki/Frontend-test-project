@@ -1,0 +1,7 @@
+.ant-btn-primary { background: var(--accent) !important; border-color: var(--accent) !important; box-shadow: none !important; }
+.ant-btn-primary:hover { background: var(--accent-dark) !important; border-color: var(--accent-dark) !important; }
+.ant-input:focus, .ant-input-focused, .ant-input-affix-wrapper-focused, .ant-select-focused .ant-select-selector { box-shadow: 0 0 0 2px #c6e2ff !important; }
+.ant-modal .ant-modal-title { font-size: 18px; }
+.ant-modal .ant-modal-content { border-radius: 10px; }
+.ant-modal .ant-form-item-label > label { color: #40546a; font-size: 12px; font-weight: 600; }
+.ant-modal .ant-input, .ant-modal .ant-picker, .ant-modal .ant-select-selector { border-color: #d5e0eb !important; background: #fafcff !important; }
