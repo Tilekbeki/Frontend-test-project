@@ -7,7 +7,11 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "test": "vitest run"
+    "test": "vitest run",
+    "lint": "eslint . --max-warnings 0",
+    "format": "prettier --write \"**/*.{js,jsx,mjs,ts,tsx,scss}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,mjs,ts,tsx,scss}\"",
+    "prepare": "node .husky/install.mjs"
   },
   "dependencies": {
     "@ant-design/icons": "^5.6.1",
@@ -17,11 +21,19 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@eslint/js": "9.39.5",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^6.1.2",
+    "eslint": "9.39.5",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "globals": "17.13.0",
+    "husky": "9.1.7",
+    "prettier": "3.9.10",
     "sass": "^1.106.1",
     "typescript": "^5.6.3",
+    "typescript-eslint": "8.72.1",
     "vite": "^8.3.5",
     "vitest": "^5.0.5"
   }

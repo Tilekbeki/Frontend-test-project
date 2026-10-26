@@ -1,4 +1,4 @@
-export { CitizenDetailPage } from './CitizenDetailPage';
-export { DashboardPage } from './DashboardPage';
-export { NotFoundPage } from './NotFoundPage';
-export { RegistryPage } from './RegistryPage';
+export { CitizenDetailPage } from './citizenDetailPage/CitizenDetailPage';
+export { DashboardPage } from './dashboardPage/DashboardPage';
+export { NotFoundPage } from './notFoundPage/NotFoundPage';
+export { RegistryPage } from './registryPage/RegistryPage';

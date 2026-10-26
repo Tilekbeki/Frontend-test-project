@@ -8,7 +8,10 @@ describe('маршруты реестра', () => {
     expect(parseRoute('/citizens')).toEqual({ name: 'registry' });
     expect(parseRoute('/citizens/')).toEqual({ name: 'registry' });
     expect(parseRoute('/citizens/123')).toEqual({ name: 'citizen', id: 123 });
-    expect(parseRoute(`/citizens/${TOTAL_CITIZENS}/`)).toEqual({ name: 'citizen', id: TOTAL_CITIZENS });
+    expect(parseRoute(`/citizens/${TOTAL_CITIZENS}/`)).toEqual({
+      name: 'citizen',
+      id: TOTAL_CITIZENS,
+    });
   });
 
   it.each([
@@ -19,7 +22,7 @@ describe('маршруты реестра', () => {
     '/citizens/abc',
     '/citizens/1/extra',
     '/other',
-  ])('отклоняет неизвестный или недопустимый путь %s', pathname => {
+  ])('отклоняет неизвестный или недопустимый путь %s', (pathname) => {
     expect(parseRoute(pathname)).toEqual({ name: 'not-found' });
   });
 });

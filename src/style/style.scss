@@ -1,6 +1,11 @@
 @use './base';
-@use '../components/pages/dashboardPage';
-@use '../components/pages/registryPage';
-@use '../components/pages/citizenDetailPage';
+@use '../components/registryLayout/registryLayout';
+@use '../components/pages/dashboardPage/dashboardPage';
+@use '../components/pages/registryPage/registryPage';
+@use '../components/pages/citizenDetailPage/citizenDetailPage';
+@use '../components/backToRegistryLink/backToRegistryLink';
+@use '../components/citizenCard/citizenCard';
+@use '../components/pages/notFoundPage/notFoundPage';
+@use '../components/editCitizen/editCitizen';
 @use './controls';
 @use './responsive';

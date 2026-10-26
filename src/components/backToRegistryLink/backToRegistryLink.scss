@@ -1,0 +1,11 @@
+.back-link {
+  color: var(--accent-dark);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.back-link:hover {
+  color: #08488f;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

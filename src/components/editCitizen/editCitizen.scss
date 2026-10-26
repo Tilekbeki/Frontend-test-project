@@ -1,0 +1,16 @@
+.form-section {
+  margin: 19px 0 15px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 18px;
+}
+.form-grid .ant-form-item {
+  margin-bottom: 13px;
+}

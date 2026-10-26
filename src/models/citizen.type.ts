@@ -19,5 +19,10 @@ export interface Citizen {
   notes: string;
 }
 
-
-export interface Filters { search: string; region: string; status: string; gender?: string; education?: string }
+export interface Filters {
+  search: string;
+  region: string;
+  status: string;
+  gender?: string;
+  education?: string;
+}

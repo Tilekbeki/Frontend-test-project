@@ -50,9 +50,15 @@ npm run dev
 Проверка перед публикацией из папки `frontend/`:
 
 ```bash
+npm run lint
+npm run format:check
 npm test
 npm run build
 ```
+
+Для автоматического форматирования исходников выполните `npm run format`. Prettier использует ширину строки 90 символов, двухпробельный отступ и переносит JSX-атрибуты на отдельные строки.
+
+Если папка `frontend/` опубликована как отдельный Git-репозиторий, `npm ci` подключит Husky. Перед push он запустит `npm run format` и `npm run lint`. Если форматирование изменит отслеживаемые файлы, push остановится до нового коммита.
 
 Собранные файлы появляются в `dist/`; они исключены из Git. Для локального просмотра сборки выполните `npm run preview`.
 
@@ -69,9 +75,9 @@ npm run build
 ## Структура клиента
 
 - `src/index.jsx` — единственный файл в корне `src`, точка входа приложения.
-- `src/components/App.tsx` — корневой компонент; `src/style/` — переменные, общие и адаптивные SCSS-стили.
-- `src/components/pages/` — страницы обзора, картотеки, карточки гражданина и ошибки маршрута; `index.js` собирает их экспорты, SCSS страниц лежит рядом.
-- `src/components/` — каркас приложения, карточка, форма и ссылка возврата.
+- `src/components/app/App.tsx` — корневой компонент; `src/style/` — переменные, общие и адаптивные SCSS-стили.
+- `src/components/pages/` — `index.js` собирает экспорты; каждая страница находится в своей папке вместе со своим SCSS: `dashboardPage/`, `registryPage/`, `citizenDetailPage/`, `notFoundPage/`.
+- `src/components/registryLayout/`, `citizenCard/`, `editCitizen/`, `backToRegistryLink/` — отдельные папки компонентов с их TSX и относящимися к ним SCSS.
 - `src/hooks/useCitizenRegistry.ts` — состояние списка, переходы, фильтры и обработка сохранения.
 - `src/services/` — генерация и выборка записей, чтение и запись в `localStorage`.
 - `src/config/` — адреса страниц, разбор маршрута и состав фильтров.
